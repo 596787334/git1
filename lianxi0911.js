@@ -2,7 +2,7 @@
 * @Author: shuangshuang
 * @Date:   2017-09-04 11:03:57
 * @Last Modified by:   shuangshuang
-* @Last Modified time: 2017-09-09 16:50:40
+* @Last Modified time: 2017-09-11 18:03:28
 */
 // var i1 = prompt ('请输入您想要的行数',5);
 // for(var i=0;i<i1;i++){
@@ -296,19 +296,43 @@
  // 	}
  // 	return true;
  // }
-    var a=[1,2,3,['a','b','v']];
-    function copy(arr){
-      var arr1=[];
-      if(typeof arr[i]=='object'){
-      	arr1[i]=copy(arr[i]);
-      }else{
-      for(var i=0;i<arr.length;i++){
-        arr1[i]=arr[i];
-      }
-     }
-     return arr1;
-    }
-    var b=copy(a);
-    a[1]=10;
-    alert(a);
-    alert(b);
+    // var a=[1,2,3,['a','b','v']];
+    // function copy(arr){
+    //   var arr1=[];
+    //   if(typeof arr[i]=='object'){
+    //   	arr1[i]=copy(arr[i]);
+    //   }else{
+    //   for(var i=0;i<arr.length;i++){
+    //     arr1[i]=arr[i];
+    //   }
+    //  }
+    //  return arr1;
+    // }
+    // var b=copy(a);
+    // a[1]=10;
+    // alert(a);
+    // alert(b);
+  // var arr=[];
+  // for(var i=0;i<10;i++){
+  // 	arr[i]=function(){
+  // 		alert(i);
+  // 	}
+  // }
+  // arr[1]();
+ // console.log(escape('赵爽'));
+ // console.log(unescape('%u8D75%u723D'));
+function person(){            //对象
+
+}
+let zhangsan=new person();
+zhangsan.name='zhangsan';
+zhangsan.age=20;
+console.log(zhangsan);
+let lisi=new person();
+lisi.name='lisi';
+lisi.age=22;
+console.log(lisi);
+zhangsan.say=function(){
+	alert(zhangsan.name);
+}
+zhangsan.say();
