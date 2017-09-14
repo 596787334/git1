@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#box{
+			width: 100px;
+			height: 100px;
+			background: red;
+		}
+	</style>
+</head>
+<body>
+<div id="box"></div>
+	<script>
+		let arr = [1,2,3,4,5,6,5,4,3,3];
+		// let sum =0;
+		// let result = arr.forEach(function(value,index,obj){
+  //           sum+=value;
+		// })
+		// console.log(sum);
+
+		//console.log(arr.find(num=>num>2));
+		// console.log(arr.indexOf(4));
+		// console.log(arr.lastIndexOf(4));
+		// console.log(arr);
+		// function norepeat(arr){              //去重方法一
+		// 	let arr1=[];
+		// 	for(let i=0;i<arr.length;i++){
+  //              if(arr1.includes(arr[i])==0){
+  //              	arr1.push(arr[i]);
+  //              }
+		// 	}
+		// 	return arr1;
+		// }
+		// let n=norepeat(arr);
+		// console.log(n);
+
+
+  //       function norepeat1(arr){          //去重方法二
+  //       	let arr1=[],arr2=[];
+  //       	for(let i=0;i<arr.length;i++){
+  //       	   let n=arr[i];
+  //              arr[i]='*';
+  //              if(arr.includes(n)==0){
+  //              	arr1.push(n);
+  //              }else{
+  //              	arr2.push(n);
+  //              }
+  //       	}
+  //       	arr1.concat(arr2);
+  //       	return arr1;
+  //       }
+  //       let m=norepeat1(arr);
+		// console.log(m);
+
+		// function norepeat2(arr){              //去重方法三
+		// 	let arr1=[],arr2=[];
+		// 	while(arr!=0){
+		// 		if(arr.indexOf(arr[0])==arr.lastIndexOf(arr[0])){
+		// 			arr1.push(arr[0]);
+		// 		}
+  //               arr.shift();
+		// 	}
+		// 	return arr1;
+		// }
+  //       let p=norepeat2(arr);
+		// console.log(p);
+		// Array.prototype.norepeat2=function(){      //把写的函数转化成构造函数的方法
+		// 	let arr1=[];
+		// 	while(this!=0){
+		// 		if(this.indexOf(this[0])==this.lastIndexOf(this[0])){
+		// 			arr1.push(this[0]);
+		// 		}
+  //               this.shift();
+		// 	}
+		// 	return arr1;
+		// }
+	 //    console.log(arr.norepeat2());
+	 // let box = document.getElementById("box");
+	 // box.onmouseover = function(){
+  //          box.style.background=color();
+	 // }
+	 function suiji(arr){                         //从数组中随机取三个数
+	 	let arr2=[];
+	 	while(arr2.length<3){
+           let n=arr[Math.floor(Math.random()*arr.length)];
+           if(!(arr2.includes(n))){
+           	arr2.push(n);
+           }
+	 	}
+	 	return arr2;
+	 }
+	 console.log(suiji(arr));
+	</script>
+</body>
+</html>
