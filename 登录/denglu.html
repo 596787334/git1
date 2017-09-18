@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/denglu.css">
+</head>
+<body>
+	<div class="deng">
+	    <span>欢迎登录</span>
+		<input type="text" placeholder="请输入你的用户名" id="denglu">
+		<input type="password" placeholder="请输入你的密码" id="mima">
+		<button id="button">登录</button>
+	</div>
+	
+</body>
+</html>
+<script>
+		let denglu = document.getElementById('denglu');
+		let mima = document.getElementById('mima');
+		let button = document.getElementById('button');console.log(button)
+        button.onclick = function(){
+        	if(denglu.value=='z'&&mima.value=='123'){
+                 alert('success~');
+        	}
+        	else{
+        		location.replace('errer.html');
+        	}
+        }
+	</script>

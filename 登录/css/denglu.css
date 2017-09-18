@@ -1,0 +1,46 @@
+/*
+* @Author: shuangshuang
+* @Date:   2017-09-15 17:09:18
+* @Last Modified by:   shuangshuang
+* @Last Modified time: 2017-09-15 17:47:46
+*/
+*{
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+}
+body{
+	background: rgba(0, 0, 0, 0.5);
+}
+span{
+	color: skyblue;
+	font-size: 25px;
+
+}
+.deng{
+	width: 400px;
+	height: 230px;
+	background: rgba(255, 255, 255, 0.8);
+	margin: 200px auto;
+	display: flex;
+	justify-content: space-around;
+	align-content: space-around;
+	flex-wrap: wrap;
+}
+input{
+	width: 350px;
+	padding: 10px;
+}
+button{
+	width: 350px;
+	background: skyblue;
+	text-align: center;
+	line-height: 40px;
+	color: #fff;
+	border-radius: 10px;
+	border: none;
+	outline: none;
+}
+button.focus{
+
+}

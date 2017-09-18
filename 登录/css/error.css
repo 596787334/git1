@@ -1,0 +1,39 @@
+/*
+* @Author: shuangshuang
+* @Date:   2017-09-15 17:09:18
+* @Last Modified by:   shuangshuang
+* @Last Modified time: 2017-09-15 17:57:45
+*/
+*{
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+}
+body{
+	background: rgba(0, 0, 0, 0.5);
+}
+.deng{
+	width: 400px;
+	height: 230px;
+	background: rgba(255, 255, 255, 0.8);
+	margin: 200px auto;
+}
+.b{
+	width: 250px;
+	padding: 10px;
+	color: #808080;
+	float:right;
+}
+.b1{
+	width: 100%;
+	padding: 10px;
+	color: #808080;
+	text-align: center;
+	font-size: 20px;
+	line-height: 30px;
+}
+span{
+	color: skyblue;
+	font-size: 25px;
+	margin-left: 100px;
+}

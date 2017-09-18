@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/error.css">
+</head>
+<body>
+	<div class="deng">
+	    <div class="b1"><b>登录失败</b></div>
+	    <span id="cc">5</span>
+	    <div class="b">秒后自动返回上一页</div>
+	</div>
+</body>
+</html>
+<script>
+	var c = document.getElementById('cc');
+			window.t = setInterval(function fn(){
+				if(c.innerText<=1){
+					clearInterval(t);
+					location.replace('denglu.html');
+				}
+				c.innerText--;},1000);
+	
+    
+	
+</script>
