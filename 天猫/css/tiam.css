@@ -2,7 +2,7 @@
 * @Author: shuangshuang
 * @Date:   2017-08-20 14:07:02
 * @Last Modified by:   shuangshuang
-* @Last Modified time: 2017-09-18 20:12:57
+* @Last Modified time: 2017-09-19 17:55:08
 */
 *{
 	margin: 0;
@@ -22,6 +22,11 @@ header{
 	height: 32px;
 	border-bottom: 1px solid #e5e5e5;
 	background: #f2f2f2;
+}
+img{
+	width: 100%;
+	height: 100%;
+	display: block;
 }
 .headleft{
 	width: 258px;
@@ -64,9 +69,11 @@ header{
 .headright{
 	width: 754px;
 	height: 100%;
-	float: right
+	float: right;
+	position: relative;
 }
 .taobao{
+	display: block;
 	width: 55px;
 	height: 100%;
 	float: left;
@@ -74,8 +81,89 @@ header{
     color: #999999;
     line-height: 32px;
 }
+.t1t{
+	width: 100px;
+	height: 45px;
+	background: #fff;
+	position: absolute;
+	top: 32px;
+	left: -1px;
+	display: flex;
+	flex-wrap: wrap;
+	border-right: 1px solid #dfdede;
+	border-left: 1px solid #dfdede;
+	border-bottom: 1px solid #dfdede;
+	display: none;
+}
+.t3t{
+	width: 100px;
+	height: 45px;
+	background: #fff;
+	position: absolute;
+	top: 32px;
+	left: 284px;
+	display: flex;
+	flex-wrap: wrap;
+	border-right: 1px solid #dfdede;
+	border-left: 1px solid #dfdede;
+	border-bottom: 1px solid #dfdede;
+	display: none;
+}
+.t2t{
+	display: block;
+	width: 100%;
+	height: 20px;
+	color: #808080;
+	font-size: 12px;
+	line-height: 20px;
+	text-align: center;
+	border-right: 1px solid #dfdede;
+	border-left: 1px solid #dfdede;
+	border-left: 1px solid #dfdede;
+}
+.n1n{
+	width: 175px;
+	height: 208px;
+	z-index: 999;
+	position: absolute;
+	top: 17px;
+	left: 315px;
+	display: none;
+}
+.n2n{
+	color: #fff;
+	font-size: 20px;
+    margin-left: 73px;
+    position: relative;
+}
+.n3n{
+	position: absolute;
+	top: 13px;
+	left: 0;
+	display: block;
+	width: 175px;
+	height: 175px;
+	background: url('../img/TB1MDxDRpXXXXXUXFXXXXXXXXXX-175-215.png') 0 0 no-repeat;
+}
+.n4n{
+	display: block;
+	width: 100%;
+	height: 40px;
+	background: #fff;
+	position: absolute;
+	top: 188px;
+    left: 0;
+}
+.n5n{
+	width: 146px;
+	height: 30px;
+	margin: 0 auto;
+	background: url('../img/TB1MDxDRpXXXXXUXFXXXXXXXXXX-175-215.png') 0 -185px no-repeat;
+}
 .taobao:hover{
 	color: #df2727;
+	background: #fff;
+
 }
 .guanzhu{
 	float: left;
@@ -320,7 +408,7 @@ header{
 #aside{
 	width: 228px;
 	height: 500px;
-	background: #ededed;
+	background: rgba(0, 0, 0, 0.6);
 	float: left;
 	position: absolute;
 	top: 0;
@@ -338,26 +426,71 @@ header{
 .aside1{
 	width: 600px;
 	height: 500px;
-	background: yellow;
+	background: #fff;
 	float: left;
 }
 .as11{
 	width: 100%;
-	height: 15%;
-	background: green;
+	height: 70px;
+	background: #fff;
+	display: flex;
+	flex-wrap: wrap;
+}
+.as12{
+	width: 25%;
+	height: 100%;
+	background: #fff;
+	line-height: 75px;
+	text-align: center;
+	font-size: 16px;
+}
+.as22{
+    font-size: 16px;
+}
+.as13{
+	width: 75%;
+	height: 100%;
+	background: #fff;
+	padding-top: 10px;
+	box-sizing: border-box;
+	display: flex;
+	flex-wrap: wrap;
+	border-bottom: 1px dashed #333;
+}
+.aw{
+	border-bottom: none;
+}
+.as13 .aw1{
+	color: #f02a75;
+}
+.as14{
+	width: 64px;
+	padding: 0 3px;
+	font-size: 14px;
+	color: #333;
 }
 .aside2{
 	width: 200px;
 	height: 500px;
-	background: red;
+	background: #fff;
 	float: left;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+.asi{
+	display: block;
+	width: 80px;
+	height: 45px;
+	margin-top: 5px;
+	background: blue;
 }
 .fen1{
 	display: block;
 	width: 188px;
 	height: 31px;
 	font-size: 14px;
-	color: #000000;
+	color: #fff;
 	line-height: 31px;
 	padding-left: 40px;
 }
@@ -397,7 +530,7 @@ header{
 }
 .ban2{
 	position: absolute;
-	display: none;
+	display: block;
 }
 .yuan{
 	width: 327px;
@@ -1166,7 +1299,7 @@ header{
 	margin-right: 14px;
 }
 .youshu{
-	width: 30px;
+	width: 40px;
 	height: 800px;
 	position: fixed;
 	background: #000;
