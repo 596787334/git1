@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	    *{
+	       	margin: 0;
+	       	padding: 0;
+	       }
+		.box{
+			width: 750px;
+			height: auto;
+			background: red;
+			overflow: hidden;
+		}
+		.bix{
+			width: 100%;
+			height: 20px;
+			font-size: 20px;
+			text-align: center;
+			color: #333;
+			margin-bottom: 10px;
+		}
+		td{
+			line-height: 40px;
+			text-align: center;
+			color: #000;
+			font-size: 14px;
+			font-weight: bold;
+			width: 150px;
+		}
+		tr{
+			display: flex;
+			justify-content: space-around;
+		}
+		button{
+			width: 50px;
+			height: 25px;
+			color: #fff;
+			background: skyblue;
+			font-size: 14px;
+			line-height: 25px;
+			border-radius: 5px;
+		}
+		.but{
+            float: right;
+            margin-right: 48px;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="bix">WUIF1707-1花名册</div>
+		<table>
+		<tr>
+			<td>姓名</td>
+			<td>性别</td>
+			<td>电话</td>
+			<td>住址</td>
+			<td>操作</td>
+		</tr>
+		</table>
+		<button class="but">添加</button>
+	</div>
+</body>
+</html>
+<script>
+    class objdate{
+      constructor(){
+      	this.date=[
+      		{name:'张三',sex :'女',phone:'123456',address:'太原'},	
+      		{name:'张三',sex :'女',phone:'123456',address:'太原'},	
+      		{name:'张三',sex :'女',phone:'123456',address:'太原'},	
+      		{name:'张三',sex :'女',phone:'123456',address:'太原'}	
+      	]
+      }
+      _init(){
+      	localStorage.setItem('student',JSON.stringify(this.date));
+      }
+      search(){
+      	let data = localStorage.getItem('student');
+      	if(!data){
+      		this._init();
+      	}
+      	//return 1;
+      	return JSON.parse(localStorage.getItem('student'));
+      }
+      updata(iid,type,value){
+      	let data = this.search();
+        console.log(data[iid]);   
+        data[iid][type]=value;           //?????
+        this.save(data);
+      }
+      save(date){
+      	localStorage.setItem('student',JSON.stringify(date));
+      }
+      del(pid){
+       let data = this.search();
+       data[pid] = '';
+       //console.log(data[pid])
+       this.save(data);
+      }
+      add(){
+      	this._init();
+      }
+    }
+    
+
+
+
+
+
+
+
+
+
+    let obj1 = new objdate();
+    let students = obj1.search();
+    //console.log(students);
+	let box = document.querySelector('.box');
+	let table1 = document.querySelector('table');
+	students.forEach((element,index)=>{
+		tr(element,index);
+	})
+    function tr(obj,i){
+    	let tr1 = document.createElement('tr');
+    	tr1.setAttribute('id',i);
+    	if(tr1.innerHTML){
+    	table1.appendChild(tr1);}
+        for(let j in obj){
+        	let td1 = document.createElement('td');
+        	td1.setAttribute('type',j);
+        	td1.innerHTML = obj[j];
+        	tr1.appendChild(td1);
+        }
+        let td2 = document.createElement('td');
+        let but = document.createElement('button');
+        but.innerHTML = `删除`;
+        if(tr1.innerHTML){
+        td2.appendChild(but); 
+        tr1.appendChild(td2);}       
+    }
+
+
+	box.addEventListener('dblclick', function(e){
+		if(e.target.nodeName =='TD'&& e.target.innerHTML!='<button>删除</button>'){
+			let oldv = e.target.innerHTML;
+			e.target.innerHTML = '';
+			let inpu = document.createElement('input');
+			e.target.appendChild(inpu);
+			inpu.value = oldv;
+			inpu.onblur = function(){
+				e.target.innerHTML = inpu.value.trim();
+				inpu = null;
+			
+			let iid = e.target.parentNode.id;
+			let typee = e.target.getAttribute('type');
+			let vv = e.target.innerHTML;
+			console.log(typee);
+            obj1.updata(iid,typee,vv);}
+		}})
+
+
+
+        box.addEventListener('click', function(e){
+        	if(e.target.nodeName =='BUTTON'){
+			if(e.target.innerHTML == '删除'){
+			let parents1 = e.target.parentNode;
+			let parents = parents1.parentNode;
+			let pid = parents.id;
+            table1.removeChild(parents);
+            obj1.del(pid);
+            for(let n = pid;n<table1.length;n++){
+				parents.nextSibling.id--;
+				parents=parents.nextSibling;
+			}
+        }
+			if(e.target.innerHTML == '添加'){
+				obj1.add();
+		students.forEach((element,index)=>{
+		tr(element,index);
+	})
+    function tr(obj,i){
+    	let tr1 = document.createElement('tr');
+    	tr1.setAttribute('id',i);
+    	if(tr1.innerHTML){
+    	table1.appendChild(tr1);}
+        for(let j in obj){
+        	let td1 = document.createElement('td');
+        	td1.setAttribute('type',j);
+        	td1.innerHTML = obj[j];
+        	tr1.appendChild(td1);
+        }
+        let td2 = document.createElement('td');
+        let but = document.createElement('button');
+        but.innerHTML = `删除`;
+        if(tr1.innerHTML){
+        td2.appendChild(but); 
+        tr1.appendChild(td2);}       
+    }
+			}
+		
+		}})
+		
+	
+
+
+</script>
