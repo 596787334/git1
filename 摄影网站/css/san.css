@@ -1,0 +1,89 @@
+/*
+* @Author: shuangshuang
+* @Date:   2017-10-16 19:38:19
+* @Last Modified by:   shuangshuang
+* @Last Modified time: 2017-10-17 11:06:03
+*/
+img{
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+.box{
+	width: 800px;
+	height: 150px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-content: space-around;
+	margin: 50px auto;
+}
+.pho{
+	width: 85px;    /* 630 */
+    height: 125px;    /* 420 */
+}
+.big{
+	width: 328px;
+	height: 504px;
+	background: yellow;
+	border: 10px solid #fff;
+	box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.6);
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	transform: scale(0, 0);
+	transition: 0.5s;
+}
+.big1{
+	width: 630px;
+	height: 420px;
+	background: yellow;
+	border: 10px solid #fff;
+	box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.6);
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	transform: scale(1, 1);
+	transition: 0.5s;
+}
+.cuo{
+	width: 50px;
+	height: 50px;
+	color: #fff;
+	font-size: 50px;
+	position: absolute;
+	right: -30px;
+	top: -30px;
+	background: #000;
+	border-radius: 50%;
+}
+.zuo{
+	width: 50px;
+	height: 50px;
+	color: #fff;
+	font-size: 50px;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	margin-top: auto;
+	margin-bottom: auto;
+	left: -100px;
+}
+.you{
+	width: 50px;
+	height: 50px;
+	color: #fff;
+	font-size: 50px;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	margin-top: auto;
+	margin-bottom: auto;
+	right: -100px;
+}
